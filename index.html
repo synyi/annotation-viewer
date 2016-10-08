@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viewer</title>
+</head>
+<body>
+open content(.txt):<input type="file" id="content">
+open annotation(.json):<input type="file" id="annotation">
+<button id="run">run</button>
+<div id="con" style="width:100%"></div>
+</body>
+<script src="node_modules/svgjs/dist/svg.js"></script>
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.defaultJSExtensions = true;
+    System.import('main.js')
+</script>
+</html>
