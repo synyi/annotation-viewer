@@ -35,15 +35,18 @@ function run() {
             let ann = new Annotator(document.querySelector('#con'));
             let annotations = JSON.parse(results[1]);
             let relations = [];
+            let counter = 0;
             let labels = annotations['concepts'].map(concept=> {
                 concept['relations'] = concept['relations'] || [];
                 concept['relations'].forEach(relation=> {
                     if (relation['attribute_id'] != undefined) {
                         relations.push({
+                            id: counter,
                             dst: concept['meta']['id'],
                             src: relation['attribute_id'],
                             text: relation['relation_type']
-                        })
+                        });
+                        counter += 1;
                     }
                 });
                 return {

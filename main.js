@@ -24,15 +24,18 @@ System.register(['./node_modules/synyi-annotation-tool/src/Annotator'], function
             var ann = new Annotator_1.Annotator(document.querySelector('#con'));
             var annotations = JSON.parse(results[1]);
             var relations = [];
+            var counter = 0;
             var labels = annotations['concepts'].map(function (concept) {
                 concept['relations'] = concept['relations'] || [];
                 concept['relations'].forEach(function (relation) {
                     if (relation['attribute_id'] != undefined) {
                         relations.push({
+                            id: counter,
                             dst: concept['meta']['id'],
                             src: relation['attribute_id'],
                             text: relation['relation_type']
                         });
+                        counter += 1;
                     }
                 });
                 return {
