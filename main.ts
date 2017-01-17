@@ -2,7 +2,7 @@
  * Created by yjh on 2016/10/8.
  */
 
-import {Annotator, Categories} from './node_modules/synyi-annotation-tool/src/Annotator'
+import {Annotator, Categories} from './synyi-annotation-tool/src/Annotator'
 function loadContentOfFile(file: File) {
     let fr = new FileReader();
     return new Promise(resolve=> {
