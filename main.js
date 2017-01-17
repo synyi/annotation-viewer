@@ -1,7 +1,7 @@
 /**
  * Created by yjh on 2016/10/8.
  */
-System.register(["./node_modules/synyi-annotation-tool/src/Annotator"], function (exports_1, context_1) {
+System.register(["./synyi-annotation-tool/src/Annotator"], function (exports_1, context_1) {
     "use strict";
     var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
         return new (P || (P = Promise))(function (resolve, reject) {
