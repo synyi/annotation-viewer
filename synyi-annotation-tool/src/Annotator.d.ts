@@ -1,26 +1,5 @@
 /// <reference path="../typings/svgjs.d.ts" />
 import { EventBase } from './lib/util/EventBase';
-export declare enum Categories {
-    'sign&symptom' = 1,
-    'diagnosis' = 2,
-    'assessment' = 3,
-    'treatment' = 4,
-    "index" = 5,
-    "drug" = 6,
-    "body location" = 7,
-    "frequency" = 8,
-    "value" = 9,
-    "change" = 10,
-    "modifier" = 11,
-    "time" = 12,
-    "instrument" = 13,
-    "location" = 14,
-    "unit" = 15,
-    "degree" = 16,
-    "bool" = 17,
-    "privacy" = 18,
-    "probability" = 19,
-}
 export declare class Annotator extends EventBase {
     svg: any;
     group: {};
@@ -45,6 +24,9 @@ export declare class Annotator extends EventBase {
     private trackLine;
     private _state;
     private state;
+    private labelMap;
+    private relationMap;
+    private categoryMap;
     constructor(container: any, config?: {});
     private init();
     private clear();
@@ -62,12 +44,14 @@ export declare class Annotator extends EventBase {
     setConfig(key: string, value: number): void;
     exportPNG(scale?: number, filename?: string): void;
     resize(width: any, height: any): void;
+    getCategoryById(id: any): any;
     getLabelById(id: any): {
         id: any;
         rect: Element;
         text: Element;
         group: HTMLElement;
         highlight: Element;
+        data: any;
         svg: {
             rect: svgjs.Element;
             group: svgjs.Element;
@@ -75,25 +59,29 @@ export declare class Annotator extends EventBase {
             text: svgjs.Element;
         };
     };
+    getLabelDataById(id: any): any;
     getSelectedTextByLabelId(id: any): any;
+    getPositionByLabelId(id: any): any;
     getRelationById(id: any): {
         path: any;
         group: Element;
         rect: any;
         id: any;
+        data: any;
         svg: {
             group: svgjs.Element;
             path: svgjs.Element;
             rect: svgjs.Element;
         };
     };
-    addLabel(category: any, selection: any): void;
+    addLabel(category: any, selection: any): any;
     removeLabel(id: any): void;
     setLabelCategoryById(id: any, category: any): void;
     addRelation(src: any, dst: any, text: any): void;
     removeRelation(id: any): void;
     removeRelationsByLabel(labelId: any): void;
     clearLabelSelection(): void;
+    displayIsMapped(bools?: any[]): void;
     private clickLabelEventHandler(event);
     private clickRelationEventHandler(event);
     private selectionParagraphEventHandler();

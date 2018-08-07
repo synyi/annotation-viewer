@@ -7,12 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var TextSelector = (function () {
     function TextSelector() {
     }
-    TextSelector.rect = function (paragraph) {
-        var startOffset, endOffset, startLineNo, endLineNo, tspan;
-        if (!paragraph)
-            (_a = this.paragraph(), startOffset = _a.startOffset, endOffset = _a.endOffset, startLineNo = _a.startLineNo, endLineNo = _a.endLineNo, tspan = _a.tspan, _a);
-        else
-            (startOffset = paragraph.startOffset, endOffset = paragraph.endOffset, startLineNo = paragraph.startLineNo, endLineNo = paragraph.endLineNo, tspan = paragraph.tspan, paragraph);
+    TextSelector.rect = function () {
+        var _a = this.paragraph(), startOffset = _a.startOffset, endOffset = _a.endOffset, startLineNo = _a.startLineNo, endLineNo = _a.endLineNo, tspan = _a.tspan;
         var text = tspan.textContent;
         var i = 0;
         var end = text.length - 1;
@@ -40,7 +36,6 @@ var TextSelector = (function () {
             left: startAt.x,
             top: startAt.y
         };
-        var _a;
     };
     TextSelector.lineNo = function () {
         var tspan = this.init().tspan;

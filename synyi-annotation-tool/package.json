@@ -1,64 +1,44 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "synyi-annotation-tool",
-        "scope": null,
-        "escapedName": "synyi-annotation-tool",
-        "name": "synyi-annotation-tool",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/Users/yjh/web/annotation_viewer"
-    ]
-  ],
-  "_from": "synyi-annotation-tool@latest",
-  "_id": "synyi-annotation-tool@0.4.14",
-  "_inCache": true,
-  "_installable": true,
+  "_from": "synyi-annotation-tool",
+  "_id": "synyi-annotation-tool@0.5.1",
+  "_inBundle": false,
+  "_integrity": "sha512-ygWUkVTkoUftc2JfmjTNVt1M/p4ERA9pQ3AUvZxopaLkt71hMJd2cq17tMmhYZq7CcnEQWBuZ8MlJSG6Gax+1Q==",
   "_location": "/synyi-annotation-tool",
-  "_nodeVersion": "5.6.0",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/synyi-annotation-tool-0.4.14.tgz_1474915324114_0.39467127714306116"
-  },
-  "_npmUser": {
-    "name": "synyi",
-    "email": "shen.yanghua@synyi.com"
-  },
-  "_npmVersion": "3.6.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "synyi-annotation-tool",
-    "scope": null,
-    "escapedName": "synyi-annotation-tool",
     "name": "synyi-annotation-tool",
+    "escapedName": "synyi-annotation-tool",
     "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/synyi-annotation-tool/-/synyi-annotation-tool-0.4.14.tgz",
-  "_shasum": "78db54d05bab156e4a5f442b288da8fc58257686",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/synyi-annotation-tool/-/synyi-annotation-tool-0.5.1.tgz",
+  "_shasum": "a13ce2b3c86d4a9638c959eb981d9897119ea4b5",
   "_spec": "synyi-annotation-tool",
-  "_where": "/Users/yjh/web/annotation_viewer",
+  "_where": "/private/tmp",
   "author": {
     "name": "synyi"
   },
   "bugs": {
     "url": "https://github.com/synyi/annotation-tool/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
-    "svgjs": "^2.2.5",
+    "svg.js": "^2.5.2",
     "systemjs": "^0.19.31"
   },
+  "deprecated": false,
   "description": "A svg library for medical history annotation (NLP)",
   "devDependencies": {
     "browser-sync": "^2.12.4",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
     "gulp-htmlbuild": "^0.4.1",
@@ -71,23 +51,9 @@
     "gulp-usemin": "^0.3.20",
     "typescript": "^1.8.0"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "78db54d05bab156e4a5f442b288da8fc58257686",
-    "tarball": "https://registry.npmjs.org/synyi-annotation-tool/-/synyi-annotation-tool-0.4.14.tgz"
-  },
-  "gitHead": "d931a95afd2ce7fb41749ba18de8ab86c81dd904",
   "homepage": "https://github.com/synyi/annotation-tool",
   "license": "Apache-2.0",
-  "maintainers": [
-    {
-      "name": "synyi",
-      "email": "shen.yanghua@synyi.com"
-    }
-  ],
   "name": "synyi-annotation-tool",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/synyi/annotation-tool.git"
@@ -96,5 +62,5 @@
     "build": "gulp",
     "tsc:w": "tsc -w"
   },
-  "version": "0.4.14"
+  "version": "0.5.1"
 }
